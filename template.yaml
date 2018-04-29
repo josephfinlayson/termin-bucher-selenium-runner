@@ -10,7 +10,7 @@ Resources:
       FunctionName: lambdium
       Description: headless chromium running selenium
       # This needs to be fairly large: chromium needs a lot of memory
-      MemorySize: 1156
+      MemorySize: 500
       Timeout: 20
       Environment:
         Variables:

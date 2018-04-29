@@ -14,7 +14,7 @@ echo 'Invoking function...'
 PAYLOAD_STRING='{"Base64Script": "'$BASE64_ENCODED'"}'
 echo $PAYLOAD_STRING > $PAYLOAD_FILE
 
-aws lambda invoke --invocation-type RequestResponse --function-name lambdium --payload file://$PAYLOAD_FILE --region us-west-2 --log-type Tail $OUTPUT_FILE
+aws lambda invoke --invocation-type RequestResponse --function-name lambdium --payload file://$PAYLOAD_FILE --region eu-central-1 --log-type Tail $OUTPUT_FILE
 
 cat $OUTPUT_FILE
 

@@ -31,8 +31,7 @@ exports.handler = (event, context, callback) => {
   $browser = sandbox.initBrowser(event, context);
 
   var opts = sandbox.buildOptions(event, $browser);
-
-  sandbox.executeScript(opts, function(err) {
+  sandbox.executeScript(opts, function(err, result) {
     if (process.env.LOG_DEBUG) {
       log.debug(child.execSync('ps aux').toString());
       log.debug(child.execSync('cat /tmp/chromedriver.log').toString())
