@@ -1,4 +1,3 @@
-
 const chromium = require('./lib/chromium');
 const sandbox = require('./lib/sandbox');
 const log = require('lambda-log');
@@ -31,7 +30,7 @@ exports.handler = (event, context, callback) => {
   $browser = sandbox.initBrowser(event, context);
 
   var opts = sandbox.buildOptions(event, $browser);
-  sandbox.executeScript(opts, function(err, result) {
+  sandbox.executeScript(opts, function (err, result) {
     if (process.env.LOG_DEBUG) {
       log.debug(child.execSync('ps aux').toString());
       log.debug(child.execSync('cat /tmp/chromedriver.log').toString())
